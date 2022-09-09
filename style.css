@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-heading: 'Staatliches', cursive;
+  --ff-texting: 'Palanquin', sans-serif;
+
+  --bg-primary: hsl(218, 17%, 62%, 1);
+  --bg-secundary: hsl(233, 100%, 97%, 1);
+  --bg-h1: hsl(275, 18%, 79%, 1);
+  --bg-h2: hsl(312, 91%, 96%, 1);
+
+  --fc-primary: hsl(0, 0%, 100%, 1);
+  --fc-secundary: hsl(274, 84%, 12%, 1);
+  --fc-terciary: hsl(232, 17%, 35%, 1);
+
+  --fs-body: 1.6rem;
+}
+
+body {
+  font-family: var(--ff-heading);
+  background-color: var(--bg-secundary);
+  color: var(--fc-primary);
+  font-size: var(--fs-body);
+}
+
+.page {
+  max-width: 38.4rem;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--bg-primary);
+  text-align: center;
+  font-family: var(--ff-heading);
+  padding-bottom: 3.2rem;
+  animation: downtop 800ms 200ms backwards;
+}
+
+header img {
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+header h1 {
+  background-color: var(--bg-h1);
+  padding: 8px 8.6rem 7px 8.7rem;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+}
+
+main {
+  padding: 1.4rem 3.2rem 6rem;
+}
+
+main p {
+  font-family: var(--ff-texting);
+  color: var(--fc-secundary);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2rem;
+  display: flex;
+
+  text-align: center;
+  margin: 1.4rem auto 6.3rem;
+  animation: downtop 800ms 200ms backwards;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3.2rem;
+}
+
+.card img {
+  object-fit: cover;
+  animation: downtop 800ms 200ms backwards;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+.card h2 {
+  position: absolute;
+  left: 19.2rem;
+  bottom: 19.9rem;
+
+  color: var(--fc-terciary);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  display: flex;
+  flex-direction: column;
+  animation: topdown 800ms 200ms backwards;
+}
+
+.card h2 span {
+  background-color: var(--bg-h2);
+  border-radius: 2rem;
+  display: inline-flex;
+  width: fit-content;
+  padding: 0 2.3rem;
+  height: 3.5rem;
+  align-items: center;
+}
+
+#img {
+  left: 19.2rem;
+  bottom: 39.9rem;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
